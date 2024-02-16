@@ -12,10 +12,10 @@ def read_pdf(file):
 
 # Function to summarize text using OpenAI API
 def summarize_text(text):
-    openai.api_key = 'your_openai_api_key_here'
+    openai.api_key = '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'
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt="Summarize the following text:\n\n" + text,
+        prompt="Summarize the following text with main points being Actions that need to be completed, Agenda of the meeting, Who the Attendees are, and the general Notes from the meeting:\n\n" + text,
         temperature=0.7,
         max_tokens=150,
         top_p=1,
